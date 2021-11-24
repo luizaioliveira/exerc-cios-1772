@@ -1,3 +1,5 @@
+package EX_IF_ELSE.src;
+
 // IF, IF ELSE, ELSE
 
 // EXERCÍCIO: Escreva um programa que receba três números e retorne eles em ordem crescente

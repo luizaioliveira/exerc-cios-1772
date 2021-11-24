@@ -1,3 +1,5 @@
+package EX_SWITCH_CASE.src;
+
 // SWITCH CASE
 
 // DESAFIO: Faça um programa de conversão de moedas.

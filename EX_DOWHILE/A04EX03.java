@@ -1,3 +1,5 @@
+package EX_DOWHILE;
+
 // WHILE, DO WHILE
 
 // EXERCÍCIO: Leia um número inteiro n. 

@@ -1,3 +1,5 @@
+package EX_SWITCH_CASE.src;
+
 // SWITCH CASE
 
 // EXERCÍCIO: Uma loja fornece 10% de desconto para funcionários e 5% de 

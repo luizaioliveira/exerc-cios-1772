@@ -1,3 +1,5 @@
+package EX_SWITCH_CASE.src;
+
 // SWITCH CASE
 
 // EXERCÍCIO: Escreva um programa utilizando o comando switch que imprima um 

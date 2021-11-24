@@ -1,3 +1,5 @@
+package EX_IF_ELSE.src;
+
 // IF, ELSE IF, ELSE
 
 // EXERCÍCIO: Escreva um programa que faça a validação do login de um usuário, considere que o nome de usuário 

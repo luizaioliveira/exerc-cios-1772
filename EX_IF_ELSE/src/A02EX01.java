@@ -1,3 +1,5 @@
+package EX_IF_ELSE.src;
+
 // IF, IF ELSE, ELSE
 
 // EXERCÍCIO: Escreva um programa que receba dois números e retorne o maior deles

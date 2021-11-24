@@ -1,3 +1,5 @@
+package EX_IF_ELSE.src;
+
 // IF, ELSE IF, ELSE
 
 // EXERCÍCIO: Construa uma calculadora utilizando a linguagem JAVA que receba 2 valores e execute as operações:
