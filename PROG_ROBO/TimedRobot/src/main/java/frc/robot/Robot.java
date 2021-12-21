@@ -1,3 +1,5 @@
+// Atividade de Luiza Oliveira e Bibiana de Oliveira
+
 package frc.robot;
 
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
@@ -21,12 +23,12 @@ public class Robot extends TimedRobot {
 
   @Override
   public void robotPeriodic() {
-    joystick = new Joystick(0);
+    
   }
 
   @Override
   public void autonomousInit() {
-    
+
   }
 
   @Override
@@ -36,7 +38,7 @@ public class Robot extends TimedRobot {
 
   @Override
   public void teleopInit() {
-
+    joystick = new Joystick(0);
   }
 
   @Override
