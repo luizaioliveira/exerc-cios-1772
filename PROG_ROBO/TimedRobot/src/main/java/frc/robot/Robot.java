@@ -6,19 +6,32 @@ import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Joystick;
 
 public class Robot extends TimedRobot {
-  SpeedControllerGroup motoresEsquerda, motoresDireita;
-  DifferentialDrive tracao;
-  Joystick joystick;
+  private VictorSP motorDireitoUm, motorDireitoDois, 
+  motorEsquerdoUm, motorEsquerdoDois; 
+  private SpeedControllerGroup motoresEsquerda, motoresDireita;
+  private DifferentialDrive tracao;
+
+  private DigitalInput sensor;
+  
+  private Joystick joystick;
 
   @Override
   public void robotInit() {
-    motoresEsquerda = new SpeedControllerGroup(new VictorSP(0), new VictorSP(1));
-    motoresDireita = new SpeedControllerGroup(new VictorSP(2), new VictorSP(3));
+    motorDireitoUm = new VictorSP(0);
+    motorDireitoDois = new VictorSP(1);
+    motorEsquerdoUm = new VictorSP(2);
+    motorEsquerdoDois= new VictorSP(3);
+
+    motoresDireita = new SpeedControllerGroup(motorDireitoUm, motorDireitoDois);
+    motoresEsquerda = new SpeedControllerGroup(motorEsquerdoUm, motorEsquerdoDois);
 
     tracao = new DifferentialDrive(motoresEsquerda, motoresDireita);
+
+    sensor = new DigitalInput(4);
   }
 
   @Override
@@ -43,7 +56,10 @@ public class Robot extends TimedRobot {
 
   @Override
   public void teleopPeriodic() {
-
+    tracao.arcadeDrive(joystick.getY(), joystick.getX());
+    if (sensor.get()){
+      motoresDireita.set(0.0);
+    }
   }
 
   @Override
